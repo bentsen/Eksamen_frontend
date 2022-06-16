@@ -1,4 +1,4 @@
-const URL = "http://localhost:8080/sport_war_exploded";
+const URL = "https://studiebandit.com/sport";
 
 async function handleHttpErrors(res) {
     if (!res.ok) {

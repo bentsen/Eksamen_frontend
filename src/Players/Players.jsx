@@ -6,7 +6,7 @@ import facade from "../Login/LoginFacade";
 const players = () => {
     const [players, setPlayers] = useState([])
     const getPlayers = async () => {
-        const res = await fetch("http://localhost:8080/sport_war_exploded/api/player")
+        const res = await fetch("https://studiebandit.com/sport/api/player")
         const data = await res.json();
         setPlayers(data);
     }
@@ -14,7 +14,7 @@ const players = () => {
     const navigate = useNavigate()
 
     const getMatchByPlayer = (event, key) => {
-        navigate("/matches",{state:"http://localhost:8080/sport_war_exploded/api/match/player/" + key});
+        navigate("/matches",{state:"https://studiebandit.com/sport/api/match/player/" + key});
     }
 
     const deletePlayer = (event, key) => {
@@ -65,7 +65,7 @@ const players = () => {
                     <div>
                         {localStorage.getItem("userType") === "admin" ? (
                             <button className="bg-blue-500 mt-10 mb-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                <Link to={"/createPlayer"}>Edit</Link>
+                                <Link to={"/createPlayer"}>Create</Link>
                             </button>) : (<p></p>)}
                     </div>
                 </div>

@@ -7,7 +7,7 @@ function App() {
   return (
    <>
        <div className="w-full bg-selection-color">
-           <div className='bg-[url("src/images/banner.png")] overflow-hidden h-screen w-full bg-cover bg-center text-center'>
+           <div className='bg-[url("./src/images/banner.png")] overflow-hidden h-screen w-full bg-cover bg-center text-center'>
                <div className="w-full flex justify-center">
                    <nav className="bg-navbar-color w-5/6 h-28 shadow-lg">
                        <div className="container mx-auto">
@@ -15,10 +15,10 @@ function App() {
                                <a className="text-gray-400 text-3xl font-bold p-3" href="">SPORT MANAGER</a>
                                <ul className="text-gray-400 sm:self-center text-x1 border-t sm:border-none">
                                    <li className="sm:inline-block">
-                                       <Link className={"p-3 hover:text-white"}to={"/"}>Home</Link>
+                                       <Link className={"p-3 hover:text-white"} to={"/"}>Home</Link>
                                    </li>
                                    <li className="sm:inline-block">
-                                       <Link className="p-3 hover:text-white" to="/matches" state={"http://localhost:8080/sport_war_exploded/api/match/"}>Matches</Link>
+                                       <Link className="p-3 hover:text-white" to="/matches" state={"https://studiebandit.com/sport/api/match/"}>Matches</Link>
                                    </li>
                                    <li className="sm:inline-block">
                                        <Link className="p-3 hover:text-white" to="/players">Players</Link>

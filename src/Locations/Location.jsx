@@ -5,7 +5,7 @@ import facade from "../Login/LoginFacade";
 const location = () => {
     const [location, setLocation] = useState([])
     const getLocation = async () => {
-        const res = await fetch("http://localhost:8080/sport_war_exploded/api/location")
+        const res = await fetch("https://studiebandit.com/sport/api/location")
         const data = await res.json();
         setLocation(data);
     }
@@ -13,7 +13,7 @@ const location = () => {
     const navigate = useNavigate()
 
     const getMatchByLocation = (event, key) => {
-        navigate("/matches",{state:"http://localhost:8080/sport_war_exploded/api/match/location/" + key});
+        navigate("/matches",{state:"https://studiebandit.com/sport/api/match/location/" + key});
     }
 
     const deleteLocation = (event, key) => {
